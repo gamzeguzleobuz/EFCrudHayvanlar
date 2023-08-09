@@ -1,0 +1,20 @@
+﻿
+@model Hayvan
+
+@{
+    ViewBag.Title = "Silme Onay";
+}
+
+<h1>Silme Onay</h1>
+
+
+<form asp-action="Sil" method="post">
+    <div class="mb-3">
+
+        <p>&quot;@Model.Ad&quot; isimli hayvan silinecektir. Onaylıyor musunuz?</p>
+        <input type="hidden" asp-for="Id"/>
+        <button class="btn btn-success">Evet</button>
+        <a asp-action="Index" class="btn btn-secondary">Iptal</a>
+    </div>
+
+</form>
